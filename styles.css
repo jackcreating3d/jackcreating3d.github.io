@@ -1,0 +1,123 @@
+/* General Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Body Styling */
+body {
+    color: #f8f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensure header stays on top */
+    height: 10vh; /* Define a consistent height for the header */
+}
+
+header .logo span {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #797979;
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  
+}
+
+/* Content Box Styling */
+.content {
+    background: url('background_image.jpg') no-repeat center center/cover;
+    padding: 5%; /* Use percentage padding to make it responsive */
+    border-radius: 10px;
+    text-align: center;
+    max-width: 95%;
+    min-height: 82vh;
+    margin-top:10vh;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    /* Centering content and spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem; /* Gap between the elements using rem */
+}
+
+/* Zoom Effect on Hover */
+.content:hover {
+    transform: scale(1.01);
+}
+
+/* Content Text Styling */
+.content h1 {
+    font-size: 4rem; /* Use rem for scalable fonts */
+    font-weight: 600;
+    color: #fffefe;
+}
+
+.content h2 {
+    font-size: 2rem; /* Use rem for consistency */
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* Increase gap between subtitle and paragraph */
+.content p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-top: 2.5%; /* Use percentage to scale with the box size */
+    padding: 0 15%; /* Use percentage to control how far the text goes horizontally */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 0.5rem; /* Use rem to control footer padding */
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .logo span {
+        font-size: 1.2rem;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .content-container {
+        padding: 5vh; /* Reduce vertical padding on smaller screens */
+    }
+
+    .content p {
+        padding: 0 5%; /* Reduce padding on smaller screens */
+    }
+}
